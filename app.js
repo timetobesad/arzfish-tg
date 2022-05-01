@@ -21,9 +21,29 @@ bot.on('message', function(msg){
 	
 	var data = msg.text.split('\n');
 	
-	data.forEach(function(el, index){
+	data = data.map(function(el){
 		
-		data[index] = '\'' + data[index] + '\'';
+		return el.toLowerCase().trim();
+		
+	});
+	
+	console.log(data);return;
+	
+	if(data[0] == 'price')
+	{
+		for(var i = 1; i < data.length; i++)
+		{
+			var sql = 'UPDATE fish SET price = ' + data[i] + ' WHERE id = ' + i;
+			con.execute(sql);
+		}
+		
+		bot.sendMessage(msg.chat.id, 'Price updated!');
+		return;
+	}
+	
+	data = data.map(function(el){
+		
+		return '\'' + el + '\'';
 		
 	});
 	
