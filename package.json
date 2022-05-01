@@ -1,0 +1,24 @@
+{
+  "name": "arz-fish",
+  "version": "1.0.0",
+  "description": "arz fish telegram helper bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timetobesad/arz-fish.git"
+  },
+  "author": "Halleman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timetobesad/arz-fish/issues"
+  },
+  "homepage": "https://github.com/timetobesad/arz-fish#readme",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node-telegram-bot-api": "^0.57.0"
+  }
+}
